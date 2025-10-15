@@ -78,7 +78,7 @@ form.addEventListener('submit', (event) => {
     response.innerHTML += ` ${finalPrice.toFixed(2)}€`;
 
     finalResponse.innerHTML = `
-    <li> Name: ${name}</li>
+    <li> Nome: ${name}</li>
     <li >Distanza da percorrere: ${distance} km</li>
     <li >Età: ${age} anni </li>
     <li>Tariffa viaggio: ${totalPrice} €</li>
