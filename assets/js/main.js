@@ -10,14 +10,53 @@ va applicato uno sconto del 40% per gli over 65.
 MILESTONE 1:
 Iniziamo implementando il programma senza alcuna estetica: usando esclusivamente due input e un bottone (non stilizzati),
 realizziamo le specifiche scritte sopra. La risposta finale (o output) sarà anch’essa da scrivere in console.*/
+const price =0.21
+let totalPrice
 
-const distance = document.getElementById('inputDistance');
-const age = document.getElementById('inputAge');
+const distanceField = document.getElementById('inputDistance');
+console.log(distanceField)
+
+const ageField = document.getElementById('inputAge');
+console.log(ageField)
+
+const btn = document.getElementById('btn');
+const form = document.getElementById('formId')
 //console.log(age, distance)
-form.addEventListner('submit', (event) => {
+/*form.addEventListner('submit', (event) => {
     event.preventDefoult();
+    const distance = distanceField.value;
+    const age = ageField.value;
+
     console.log(distance, age)
+});*/
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const distance = distanceField.value
+    const age = ageField.value
+    const totalPrice = (price * distance)
+    //console.log(distance, age, totalPrice)
+
+    if(age < 18){
+       finalPrice = totalPrice - totalPrice * 0.2
+       console.log(`Il tuo biglietto costa ${finalPrice.toFixed(2)}€`)
+    } else if(age > 65){
+        finalPrice = totalPrice - totalPrice * 0.4
+        console.log(`Il tuo biglietto costa ${finalPrice.toFixed(2)}€`)
+        
+    } else{
+        finalPrice = totalPrice
+        console.log(`Il tuo biglietto costa ${finalPrice.toFixed(2)}€`)
+        
+    }
+
+
+
 });
+
+console.log(totalPrice)
+
+
+
 
 
 
