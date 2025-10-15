@@ -10,10 +10,13 @@ body{
 }
 
 .form{
-    
+    padding: 0 1.5rem;
     border: 1px solid gold;
     border-radius: 6px;
     background-color: rgba(0, 0, 0, 0.7);
+    h2{
+        color: gold;
+    }
     ul{
         color: white;
         list-style: none;
